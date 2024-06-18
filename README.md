@@ -43,7 +43,7 @@ docker build -t fastapi-webcam-app .
 ### 2. Run the Docker Container
 
 ```bash
-docker run -d -p 8000:8000 --name fastapi-webcam-app fastapi-webcam-app
+docker run -d -p 8000:8000 --name fastapi-webcam-app --device=/dev/video0 fastapi-webcam-app
 ```
 
 ## Running the Application

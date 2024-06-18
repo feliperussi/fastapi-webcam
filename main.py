@@ -1,8 +1,18 @@
 from fastapi import FastAPI
+from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import StreamingResponse
 import cv2
 
 app = FastAPI()
+
+# Set up CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def gen_frames():
     cap = cv2.VideoCapture(0)

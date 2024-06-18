@@ -79,7 +79,7 @@ pip list
 The `requirements.txt` file should contain the specific versions of the libraries used:
 
 ```text
-fastapi==0.95.0
-uvicorn==0.21.1
-opencv-python-headless==4.5.3.56
+fastapi==0.111.0
+uvicorn==0.30.1
+opencv-python-headless==4.10.0.84
 ```
